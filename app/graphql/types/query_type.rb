@@ -27,5 +27,20 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    # Fetch all recipes
+  
+
+    # Fetch a single recipe by ID
+    field :recipe, Types::RecipeType, null: true, resolver: Resolvers::RecipeResolver
+
+    # Fetch comments for a specific recipe
+    field :comments, [Types::CommentType], null: false, resolver: Resolvers::CommentsResolver
+
+    # Fetch ratings for a specific recipe
+    field :ratings, [Types::RatingType], null: false, resolver: Resolvers::RatingResolver
+
+    # Fetch a user by ID
+    field :user, Types::UserType, null: true, resolver: Resolvers::UserResolver
   end
 end
