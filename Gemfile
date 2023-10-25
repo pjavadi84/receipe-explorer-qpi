@@ -18,6 +18,9 @@ gem 'rubocop-rails', require: false
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
+# database testing
+gem 'faker'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
